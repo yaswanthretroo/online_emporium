@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Form</title>
+    <style>
+        /* Inline CSS to add the background image */
+        body {
+            background-image: url('watchback.jpg'); /* Replace with your image path */
+            background-size: cover;         /* Ensures the image covers the entire viewport */
+            background-position: center;    /* Centers the image */
+            background-repeat: no-repeat;   /* Prevents repetition of the image */
+            background-attachment: fixed;   /* Fixes the image for a parallax effect */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contact Form container styling */
+        .contact-container {
+            background: rgba(255, 255, 255, 0.85); /* Semi-transparent background for readability */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Title styling */
+        .contact-left-title h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-left-title hr {
+            border: none;
+            height: 3px;
+            width: 70px;
+            background-color: #6a11cb;
+            margin: 10px auto 25px;
+        }
+
+        /* Input fields styling */
+        .contact-input {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-input:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+            outline: none;
+        }
+
+        /* Checkbox and button styling */
+        label {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        button img {
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+        }
+
+        /* Flex for checkboxes */
+        .checkbox-container {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-container">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>WRIST GALAXY</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="94da3141-65c3-494c-ac18-c69eb1f9a2a7">
+            <p id= "productAdded"></p>
+            <input type="text" name="name" placeholder="Your Name" class="contact-input" required />
+            <input type="text" name="number" placeholder="10-digit mobile number" class="contact-input" required />
+            <input type="text" name="pincode" placeholder="Pincode" class="contact-input" required />
+            <textarea name="address" placeholder="Address(Area and Street)" class="contact-input" required></textarea>
+            <input type="text" name="city" placeholder="City/District/Town" class="contact-input" required />
+            
+            <label for="state">Select Your State</label>
+            <select name="state" id="state" class="contact-input">
+                <option value="" disabled selected>--Select State--</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Tamilnadu">Tamilnadu</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Karnataka">Karnataka</option>
+            </select>
+           
+
+            <input type="text" name="landmark" placeholder="Landmark" class="contact-input" />
+            <input type="text" name="alternate_phone" placeholder="Alternate phone (optional)" class="contact-input" />
+            
+           
+
+            <button type="submit">SAVE AND DELIVERY HERE </button>
+        </form>
+        <script>
+            function displayProductInForm() {
+        // Retrieve the product name from localStorage
+        const productName = localStorage.getItem('selectedProduct');
+
+        // Check if a product name was found, and display it
+        if (productName) {
+            document.getElementById('productAdded').textContent = `Product Added: ${productName}`;
+        }
+        }
+
+        // Call the function when the page loads
+        document.addEventListener('DOMContentLoaded', displayProductInForm);
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        let valid = true;
+
+        // Validate Name: Only letters and spaces, no numbers or symbols
+        const name = document.querySelector('[name="name"]');
+        const namePattern = /^[A-Za-z\s]+$/;  // Only letters and spaces
+        if (!namePattern.test(name.value)) {
+            alert('Name should only contain letters and spaces.');
+            valid = false;
+        }
+
+        // Validate Mobile Number: Should be exactly 10 digits of integers
+        const mobileNumber = document.querySelector('[name="number"]');
+        const mobilePattern = /^\d{10}$/;  // Exactly 10 digits
+        if (!mobilePattern.test(mobileNumber.value)) {
+            alert('Mobile number should be exactly 10 digits.');
+            valid = false;
+        }
+
+        // Validate Pincode: Should be exactly 6 digits and only integers
+        const pincode = document.querySelector('[name="pincode"]');
+        const pincodePattern = /^\d{6}$/;  // Exactly 6 digits
+        if (!pincodePattern.test(pincode.value)) {
+            alert('Pincode should be exactly 6 digits.');
+            valid = false;
+        }
+
+       
+        // If any validation fails, prevent form submission
+        if (!valid) {
+            event.preventDefault();
+        }
+    });
+        </script>
+    </div>
+</body>
+</html>

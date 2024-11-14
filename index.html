@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Shop</title>
+    <link rel="stylesheet" href="yascss.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Watch Shop</h1>
+    </header>
+
+    <main class="main-container">
+        <!-- Cart Section -->
+        <div id="cart-container">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be displayed here in order of addition -->
+            </ul>
+           
+            <form action="FORM.HTML" method="GET">
+                <button type="submit" id="checkout" style="display: block;">Checkout</button>
+            </form>
+            
+            <button id="remove-all" style="display: none;">Remove All</button>
+        </div>
+
+        
+        <section class="products">
+            
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk92hoSx6sdrke0TnZjbX9DNaEqb0c0ZQjzg&amp;s"
+                     alt="Tommy Hilfiger Analog Stainless Steel Watch" class="product-image">
+                <div class="product-details">
+                    <h2>Tom Bradon</h2>
+                    <p class="price">$299.99</p>
+                    <p class="description">Analog Stainless Steel</p>
+                    <button class="addToCart" data-name="Analog Stainless Steel" data-price="299.99">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Analog Stainless Steel')">Buy Now</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://mumbai.mallsmarket.com/sites/default/files/photos/news/sonata-sleek-collection-watches-nov2017-2.jpg"
+                     alt="Tommy Hillfiger Analog Stainless Steel Watch" class="product-image">
+                <div class="product-details">
+                    <h2>Son Q1</h2>
+                    <p class="price">$199.99</p>
+                    <p class="description">Tommy Bannon Analog Stainless Steel</p>
+                    <button class="addToCart" data-name="Tommy Bannon Analog Stainless Steel" data-price="299.99">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Tommy Bannon Analog Stainless Steel')">Buy Now</button>
+                </div>
+            </div>
+            
+            
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSinDGJovZz5v83zrMudLn11JwF4G9JRg77g&amp;s"
+                     alt="Benyar Neo Splash Blue Dial Quartz Multifunction Stainless Steel Watch" class="product-image">
+                <div class="product-details">
+                    <h2>Benyar</h2>
+                    <p class="price">$399.99</p>
+                    <p class="description">Neo Splash Blue Dial Quartz Multifunction Stainless Steel</p>
+                    <button class="addToCart" data-name="Neo Splash Blue Dial Quartz Multifunction Stainless Steel" data-price="299.99">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Neo Splash Blue Dial Quartz Multifunction Stainless Steel')">Buy Now</button>
+                </div>
+            </div>
+
+            
+            <div class="product">
+                <img src="https://www.jewellerygraphics.net/cdn/shop/products/AI1019-Couplesweddingringswatermark.jpg?v=1678580778&width=480"
+                     alt="Couple rings" class="product-image">
+                <div class="product-details">
+                    <h2>Aron  rings</h2>
+                    <p class="price">$23</p>
+                    <p class="description">Couple rings </p>
+                    <button class="addToCart" data-name="Couple rings" data-price="23">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Couple rings')">Buy Now</button>
+                </div>
+            </div>
+            
+            <!-- Watch 4 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzjtpx7BgyzVDkBH7bbizVHW1y4BQQBRSTaw&s"
+                     alt="Silver plated rings" class="product-image">
+                <div class="product-details">
+                    <h2>Wensy rings</h2>
+                    <p class="price">$26</p>
+                    <p class="description">Silver plated rings</p>
+                    <button class="addToCart" data-name="Silver plated rings" data-price="26">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Silver plated rings')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Watch 5 -->
+            <div class="product">
+                <img src="https://www.fionadiamonds.com/cdn/shop/products/FRHR0039_1024x.png?v=1706174791"
+                     alt="radient rings" class="product-image">
+                <div class="product-details">
+                    <h2>Radient rings</h2>
+                    <p class="price">$33</p>
+                    <p class="description">radient rings</p>
+                    <button class="addToCart" data-name="radient rings" data-price="33">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('radient rings')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Watch 6 -->
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61vH-1XU7iL.jpg"
+                     alt="Brown flower pots" class="product-image">
+                <div class="product-details">
+                    <h2>Cassy pots</h2>
+                    <p class="price">$17</p>
+                    <p class="description">Brown flower pots</p>
+                    <button class="addToCart" data-name="Brown flower pots" data-price="17">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Brown flower pots')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Watch 7 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC0ytoY6IGLLW1oP6AcO-nFQAVx5ICFo0urA&s"
+                     alt="Elegant pots">
+                <div class="product-details">
+                    <h2>Elspare pots </h2>
+                    <p class="price">$20</p>
+                    <p class="description">Elegant pots</p>
+                    <button class="addToCart" data-name="Elegant pots" data-price="20">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Elegant pots')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Watch 8 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSCD7kaphSXJ4J6Sfkfj1woBLhK_DXCFXPOQ&s"
+                     alt="Greeny grass pots" class="product-image">
+                <div class="product-details">
+                    <h2>Pots Pots</h2>
+                    <p class="price">$19</p>
+                    <p class="description">Greeny grass pots</p>
+                    <button class="addToCart" data-name="Greeny grass pots" data-price="19">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Greeny grass pots')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Watch 9 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAOmWitbqkPWV-0XI3xcofrL4eKEutsBhVw&s"
+                     alt="Curb bracelets" class="product-image">
+                <div class="product-details">
+                    <h2>Louis Brace</h2>
+                    <p class="price">$25</p>
+                    <p class="description">Curb bracelets</p>
+                    <button class="addToCart" data-name="Curb bracelets" data-price="25">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Curb bracelets')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Watch 10 -->
+            <div class="product">
+                <img src="https://cdn.caratlane.com/media/catalog/product/J/T/JT01144-YGP900_1_lar.jpg"
+                     alt="Slim bracelets" class="product-image">
+                <div class="product-details">
+                    <h2>Alice bracelets</h2>
+                    <p class="price">$20</p>
+                    <p class="description">Slim bracelets</p>
+                    <button class="addToCart" data-name="Slim bracelets" data-price="20">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Slim bracelets')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Watch 11 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyVr6Y0o3icJB_PkDxYmWg0z24-B5W_sDa7w&s"
+                     alt="Corrine bracelets" class="product-image">
+                <div class="product-details">
+                    <h2>Cor bracelets</h2>
+                    <p class="price">$25</p>
+                    <p class="description">Corrine bracelets</p>
+                    <button class="addToCart" data-name="Corrine bracelets" data-price="25">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Corrine bracelets')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Watch 12 -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLiERKfzEVpFb-3k7TzNU-hPbm4YjDfQ7PkQ&s"
+                     alt="Elegant Jhumkas" class="product-image">
+                <div class="product-details">
+                    <h2>jhum jhum</h2>
+                    <p class="price">$13</p>
+                    <p class="description">Elegant Jhumkas</p>
+                    <button class="addToCart" data-name="Elegant Jhumkas" data-price="13">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Elegant Jhumkas')">Buy Now</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvezbc7qjB9gGNmw-RjJmBLDMVIgvBNPnYJA&s"
+                     alt="Attractively design jhumkas" class="product-image">
+                <div class="product-details">
+                    <h2>Quat jhumkas</h2>
+                    <p class="price">$11</p>
+                    <p class="description">Attractively design jhumkas</p>
+                    <button class="addToCart" data-name="Attractively design jhumkas" data-price="11">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('Attractively design jhumkas')">Buy Now</button>
+                </div>
+            </div>
+            <!-- Additional Watches... -->
+            <div class="product">
+                <img src="https://thekojewelleryshop.com/cdn/shop/files/86C1B642-7015-4D9C-B4E4-D04062FC60BE.jpg?v=1722415239"
+                     alt="White jhumkas" class="product-image">
+                <div class="product-details">
+                    <h2>Jhak jhumkas</h2>
+                    <p class="price">$19</p>
+                    <p class="description">White jhumkas</p>
+                    <button class="addToCart" data-name="White jhumkas" data-price="19">Add to Cart</button>
+                    <button class="buyNow" onclick="buyNow('White jhumkas')">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- More Products can go here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Watch Shop. Thanks for visiting!</p>
+    </footer>
+
+    <script src="yasjs.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const checkoutButton = document.getElementById('checkout');
+            const removeAllButton = document.getElementById('remove-all');
+
+            // Function to add an item to the cart
+
+            function addToCart(productName) {
+    // Save the product name to localStorage
+    localStorage.setItem('selectedProduct', JSON.stringify(productName));
+cart.push(item);
+displayCart();
+}
+
+
+            // Function to remove an item from the cart
+            function removeFromCart(index) {
+                cart.splice(index, 1);
+                displayCart();
+            }
+
+            // Function to clear all items from the cart
+            function removeAllFromCart() {
+                cart.length = 0; // Clear cart array
+                displayCart();
+            }
+
+            // Function to display items in the cart in order of addition
+            function displayCart() {
+                cartItemsContainer.innerHTML = '';
+
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = '<li>Your cart is empty.</li>';
+                    checkoutButton.style.display = 'none';
+                    removeAllButton.style.display = 'none';
+                } else {
+                    cart.forEach((item, index) => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            ${index + 1}. ${item.name} - $${item.price} 
+                            <button onclick="removeFromCart(${index})">Remove</button>
+                        `;
+                        cartItemsContainer.appendChild(li);
+                    });
+                    checkoutButton.style.display = 'block';
+                    removeAllButton.style.display = 'block';
+
+                    // Prepare a list of product names as a string for form submission
+                    const productNames = cart.map(item => item.name).join(', ');
+                    cartDataInput.value = `Product Added: ${productNames}`; // Formatted product names
+                }
+            }
+
+            function saveSelectedProduct(name) {
+    localStorage.setItem('selectedProduct', name);
+}
+
+
+            // Event listener for Add to Cart buttons
+            document.querySelectorAll('.addToCart').forEach(button => {
+                button.addEventListener('click', () => {
+                    const itemName = button.getAttribute('data-name');
+                    const itemPrice = button.getAttribute('data-price');
+                    addToCart({ name: itemName, price: itemPrice });
+                    alert(`${itemName} has been added to your cart!`);
+                });
+            });
+
+
+
+            
+
+
+            // Buy Now function
+            window.buyNow = function(itemName) {
+                alert(`Proceeding to checkout for ${itemName}`);
+            };
+
+            // Attach removeFromCart and removeAllFromCart functions to global scope
+            window.removeFromCart = removeFromCart;
+            removeAllButton.addEventListener('click', removeAllFromCart);
+
+           
+        });
+    </script>
+</body>
+</html>
